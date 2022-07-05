@@ -90,8 +90,6 @@ variables = {
   }
 }
 
-#token = request_wiz_api_token(client_id, client_secret)
-
 def query_wiz_api(query, variables):
     """Query WIZ API for the given query data schema"""
     data = {"variables": variables, "query": query}
