@@ -12,4 +12,5 @@ Requires Pandas
 <b>Setup</b>
 
 Add in access key and secret key
+
 Specify datacenter found in User Settings
