@@ -4,6 +4,8 @@ from auth import *
 
 client_id = ""
 client_secret = ""
+#Found in User Settings e.g "us20.app"
+app_url = "us20.app"
 
 query = ("""
     query CloudConfigurationSettingsTable(
@@ -99,7 +101,7 @@ def query_wiz_api(query, variables):
         # to run behind proxies
         # result = requests.post(url="https://api.us20.app.wiz.io/graphql",
         #                        json=data, headers=HEADERS, proxies=proxyDict)
-        result = requests.post(url="https://api.us20.app.wiz.io/graphql",
+        result = requests.post(url="https://api." + app_url + ".wiz.io/graphql",
                                json=data, headers=HEADERS)
     except Exception as e:
         if ('502: Bad Gateway' not in str(e) and
